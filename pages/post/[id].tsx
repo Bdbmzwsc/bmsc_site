@@ -2,7 +2,11 @@ import { getAllPostsId,getPostData,Post } from "../../lib/posts";
 import { NextPage } from "next";
 import { GetStaticPaths,GetStaticProps } from "next";
 import styles from '../../styles/Post.module.css';
+import 'highlight.js/styles/github-dark.css';
+import hljs from "highlight.js";
+import { useEffect } from "react";
 const PostPage: NextPage=({postData}: any) =>{
+    useEffect(()=>{hljs.highlightAll()})
     return( <div className={styles.container}>
             <div className={styles.main}>
                 <div className={styles.des}>

@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import remarkHtml from 'remark-html';
 import { remark } from 'remark';
+import hljs from 'highlight.js';
 
 const postdic=path.join(process.cwd(),'posts');
 
@@ -54,7 +55,10 @@ export async function getPostData(id: string){
     const processcontent=await remark()
     .use(remarkHtml)
     .process(matterres.content)
-    const html=processcontent.toString();
+    let html=processcontent.toString();
+   // console.log(html);
+   //  html=hljs.highlightAuto(html).value;
+    // console.log(html);
     return{
         id,
         html,
