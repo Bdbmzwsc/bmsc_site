@@ -33,7 +33,7 @@ const Home: NextPage = ({allpostsdata}: any) => {
               <a className={styles.card} href={`/post/${id}`}>
                   <h2>{title}</h2>
                   <p>{des}</p>
-                  <div className={styles.date}>{date}</div>
+                  <div className={styles.date}>date: {date}</div>
               </a>
             )
           })}
