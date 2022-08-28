@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Face from '../compoents/Face';
 import { getStaticPosts } from '../lib/posts';
+import Postcard from '../compoents/Postcard';
 //import { Post } from '../lib/post';
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 
@@ -13,10 +14,17 @@ import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 
 const Home: NextPage = ({allpostsdata}: any) => {
 
-  
+             {/*   <a className={styles.btna} href={`/post/${id}`}>
+               
+               <span><h2>{title}</h2></span>
+                  <p>{des}</p>
+                  <div className={styles.date}>date: {date}</div>
+                  
+              </a>*/} 
   
  // getStaticPosts();
   return (
+    
     <div className={styles.container}>
       <Head>
         <title>Bdbmzwsc's site</title>
@@ -28,13 +36,10 @@ const Home: NextPage = ({allpostsdata}: any) => {
       <main className={styles.main}>
         <Face />
         <div className={styles.grid}>
-          {allpostsdata.map(({id,title,date,des}: any)=>{
+          {allpostsdata.map(({id,title,date,des,backimg}: any)=>{
             return(
-              <a className={styles.card} href={`/post/${id}`}>
-                  <h2>{title}</h2>
-                  <p>{des}</p>
-                  <div className={styles.date}>date: {date}</div>
-              </a>
+              <Postcard id={id} title={title} date={date} des={des} backimg={backimg}/>
+
             )
           })}
           </div>

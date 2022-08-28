@@ -9,7 +9,9 @@ const postdic=path.join(process.cwd(),'posts');
 
 export interface Post{
     title: string,
-    date: string
+    date: string,
+    des: string,
+    backimg: string
 };
 
 export function getStaticPosts(){

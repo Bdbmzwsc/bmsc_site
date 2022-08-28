@@ -2,6 +2,7 @@
 title: 'About me'
 date: '2022-8-27'
 des: 'a post about me'
+backimg: 'https://dev-to-uploads.s3.amazonaws.com/i/95lvt23xz4ozer5byomi.png'
 ---
 
 ### Identity
