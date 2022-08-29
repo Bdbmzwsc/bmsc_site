@@ -16,7 +16,7 @@ const PostPage: NextPage=({postData}: any) =>{
  /*   const GitalkComponent=dynamic(
         import('gitalk/dist/gitalk-component'),
         {ssr: false}
-    );  */
+    );      */
     const admi: string[]=['Bdbmzwsc'];
     return( 
         
