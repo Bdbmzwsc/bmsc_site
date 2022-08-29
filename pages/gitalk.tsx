@@ -1,7 +1,7 @@
-import 'gitalk/dist/gitalk.css'
+/*import 'gitalk/dist/gitalk.css'
 import Gitalk from 'gitalk'
 import dynamic from "next/dynamic";
-import { config } from '../config/ghoauth';
+import { config } from '../config/ghoauth';*/
 import { NextPage } from 'next';
 import Head from 'next/head';
 const Gita: NextPage=()=>{
