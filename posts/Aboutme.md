@@ -2,7 +2,7 @@
 title: 'About me'
 date: '2022-8-27'
 des: 'a post about me'
-backimg: 'https://dev-to-uploads.s3.amazonaws.com/i/95lvt23xz4ozer5byomi.png'
+backimg: 'https://avatars.githubusercontent.com/u/88311279?s=400&u=9f913b319c2cf39977f8ca5e54d07052ca9d99c0&v=4'
 ---
 
 ### Identity
@@ -27,6 +27,6 @@ I am a 13-year-old student,and an Oier
 - ![TypeScript](https://img.shields.io/badge/-TypeScript-blue?style=for-the-badge&logo=appveyor)
 
 ### Contact
-- Email: [chinabdbmzwsc@outlook.com](mailto: chinabdbmzwsc@outlook.com)
+- Email: [chinabdbmzwsc@outlook.com](mailto:chinabdbmzwsc@outlook.com)
 - QQ: 1726016497
 - GitHub: [github.com/Bdbmzwsc](https://github.com/Bdbmzwsc)

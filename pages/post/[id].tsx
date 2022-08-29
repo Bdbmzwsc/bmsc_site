@@ -5,11 +5,35 @@ import styles from '../../styles/Post.module.css';
 import 'highlight.js/styles/github-dark.css';
 import hljs from "highlight.js";
 import { useEffect } from "react";
+import Head from "next/head";
+import 'gitalk/dist/gitalk.css'
+import Gitalk from 'gitalk'
+import dynamic from "next/dynamic";
+import { config } from '../../ghoauth';
+
 const PostPage: NextPage=({postData}: any) =>{
     useEffect(()=>{hljs.highlightAll()})
-    return( <div className={styles.container}>
+    const GitalkComponent=dynamic(
+        import('gitalk/dist/gitalk-component'),
+        {ssr: false}
+    );
+    const admi: string[]=['Bdbmzwsc'];
+    return( 
+        
+        <div>
+
+            
+            <Head>
+                <title>{postData.title}</title>
+
+            </Head>
+            <img alt="backimg" src={postData.backimg} className={styles.backimg}/>
+    <div className={styles.container}>
+         
             <div className={styles.main}>
+           
                 <div className={styles.des}>
+               
                 <h1 className={styles.title}>{postData.title}
                 </h1>
                 <div className={styles.date}>{postData.date}</div>
@@ -17,9 +41,10 @@ const PostPage: NextPage=({postData}: any) =>{
                 <div className={styles.des}>
                 
                 <div className={styles.md} dangerouslySetInnerHTML={{__html: postData.html}}/>
+
                 </div>
                 </div>
-    </div>)
+    </div></div>)
 }
 export default PostPage
 export const getStaticProps: GetStaticProps=async ({params})=>{
