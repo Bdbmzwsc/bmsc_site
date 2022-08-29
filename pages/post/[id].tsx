@@ -6,17 +6,17 @@ import 'highlight.js/styles/github-dark.css';
 import hljs from "highlight.js";
 import { useEffect } from "react";
 import Head from "next/head";
-import 'gitalk/dist/gitalk.css'
-import Gitalk from 'gitalk'
-import dynamic from "next/dynamic";
-import { config } from '../../ghoauth';
+//import 'gitalk/dist/gitalk.css'
+//import Gitalk from 'gitalk'
+//import dynamic from "next/dynamic";
+//import { config } from '../../config/ghoauth';
 
 const PostPage: NextPage=({postData}: any) =>{
     useEffect(()=>{hljs.highlightAll()})
-    const GitalkComponent=dynamic(
+ /*   const GitalkComponent=dynamic(
         import('gitalk/dist/gitalk-component'),
         {ssr: false}
-    );
+    );*/
     const admi: string[]=['Bdbmzwsc'];
     return( 
         

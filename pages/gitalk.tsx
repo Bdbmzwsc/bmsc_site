@@ -1,14 +1,14 @@
 import 'gitalk/dist/gitalk.css'
 import Gitalk from 'gitalk'
 import dynamic from "next/dynamic";
-import { config } from '../ghoauth';
+import { config } from '../config/ghoauth';
 import { NextPage } from 'next';
 import Head from 'next/head';
 const Gita: NextPage=()=>{
-    const GitalkComponent=dynamic(
+ /*   const GitalkComponent=dynamic(
         import('gitalk/dist/gitalk-component'),
         {ssr: false}
-      );
+      );*/
       const admi: string[]=['Bdbmzwsc'];
     return <div>
             <Head>
@@ -16,7 +16,7 @@ const Gita: NextPage=()=>{
             </Head>
 
 
-            <GitalkComponent 
+           {/* <GitalkComponent 
             options={{
             clientID: config.clientId,
              clientSecret:  config.clientsecret,
@@ -29,7 +29,7 @@ const Gita: NextPage=()=>{
              label: 'Gitalk',
              proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token'
             }}
-             />
+        />*/}
     </div>
 }
 export default Gita;
