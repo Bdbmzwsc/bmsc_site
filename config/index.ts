@@ -5,3 +5,18 @@ const config={
     des: 'I am a 13-year-old student from China'
 }
 export default config;
+export const indna=[
+    {
+        ind: '/gitalk',
+        nam: 'gitalk'
+    },
+    {
+        ind: '/post',
+        nam: 'Posts'
+    },
+    {
+        ind: '/',
+        nam: 'Home'
+    }
+   
+]

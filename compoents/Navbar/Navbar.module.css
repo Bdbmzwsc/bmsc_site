@@ -10,3 +10,13 @@
     margin-top: 1%;
     margin-left: 4%;
 }
+.indexbtn {
+  margin-top: -17px;
+  font-size: 121%;
+  float: right;
+  margin-right: 49px;
+  transition: all 0.4s;
+}
+.indexbtn:hover {
+    color: #0070f3;
+}
