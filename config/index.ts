@@ -11,6 +11,10 @@ export const indna=[
         nam: 'gitalk'
     },
     {
+        ind: '#talk',
+        nam: 'Chat'
+    },
+    {
         ind: '/post',
         nam: 'Posts'
     },

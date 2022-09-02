@@ -68,7 +68,7 @@ const Home: NextPage = ({allpostsdata}: any) => {
 
           <Link href={`/api/talk/?msgn=${getvalue}&name=${Name}`}>
             
-          <div className={styles.butto}>
+          <div className={styles.butto} id="talk">
         <Button content="getvalue"
         
         />
