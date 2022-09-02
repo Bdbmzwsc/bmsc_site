@@ -10,6 +10,9 @@ import Link from 'next/link';
 //import { Post } from '../lib/post';
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
 import Navbar from '../compoents/Navbar';
+import React from 'react';
+import { useState } from 'react';
+import { useRef } from 'react';
 
 
 
@@ -27,6 +30,18 @@ const Home: NextPage = ({allpostsdata}: any) => {
               </a>*/} 
   
  // getStaticPosts();
+ const [getvalue,Setgetvalue]=useState('');
+ const inputref=useRef(null);
+ const changeinputevent=(event: {target: {value: any}})=>{
+    Setgetvalue(event.target.value);
+ }
+
+ const[Name,SetName]=React.useState('');
+ const nameinputref=useRef(null);
+ const nameinputchange=(event: any)=>{
+    SetName(event.target.value);
+ };
+
   return (
     
     <div className={styles.container}>
@@ -47,9 +62,16 @@ const Home: NextPage = ({allpostsdata}: any) => {
             )
           })}
           </div>
-          <Link href={`/gitalk`}>
+          Value: <input type="text" value={getvalue} ref={inputref} onChange={changeinputevent}/>
+          Name: <input type='text' ref={nameinputref} value={Name} onChange={nameinputchange}
+          />
+
+          <Link href={`/api/talk/?msgn=${getvalue}&name=${Name}`}>
+            
           <div className={styles.butto}>
-        <Button content="Gitalk"/>
+        <Button content="getvalue"
+        
+        />
         </div>
         </Link>
       </main>
