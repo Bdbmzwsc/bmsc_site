@@ -17,6 +17,46 @@
   margin-right: 49px;
   transition: all 0.4s;
 }
+.link {
+
+}
 .indexbtn:hover {
     color: #0070f3;
+}
+.navbarto {
+  display: none;
+}
+.navbarhi {
+  
+}
+.navbarmo {
+  opacity: 0;
+}
+
+@media(max-width: 600px) {
+    .navbarto {
+      display: inline-block;
+      background-color: inherit;
+      margin-right: 13px;
+    }
+    .navbarmo {
+      opacity: 1;
+      transition: all 0.13;
+      flex-direction: column;
+    }
+    .navbarmohi {
+      display: none;
+    }
+    .navbarhi {
+      display: none;
+      opacity: 0;
+  transition: all 0.13s;
+  position: absolute;
+  color: inherit;
+    }
+    .title {
+      margin-top: -10px;
+    }
+    
+    
 }
